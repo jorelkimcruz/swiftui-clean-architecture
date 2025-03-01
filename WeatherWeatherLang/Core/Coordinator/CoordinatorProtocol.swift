@@ -29,13 +29,13 @@ protocol CoordinatorProtocol: View {
 }
 
 // implemented by routes enum inside each view
-protocol Routing: Equatable {
-}
+protocol Routing: Equatable {}
 
 // implemented by the view that has routes
 protocol Coordinatable: View {
     associatedtype Route: Routing
 }
+
 enum Transition {
     case push
     case bottomSheet

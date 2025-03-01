@@ -13,16 +13,16 @@ enum Routes: Hashable {
 
 enum FullScreenCover: String, Identifiable {
     var id: String {
-        self.rawValue
+        rawValue
     }
-    
+
     case dashboard
 }
 
-//enum Sheet: String, Identifiable {
+// enum Sheet: String, Identifiable {
 //    var id: String {
 //        self.rawValue
 //    }
 //    // Add your sheet cases here
 //    case
-//}
+// }

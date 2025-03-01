@@ -1,32 +1,28 @@
 //
-//  ContentView.swift
+//  SplashView.swift
 //  WeatherWeatherLang
 //
 //  Created by jorel kim cruz on 3/2/25.
 //
 
-import SwiftUI
 import Lottie
+import SwiftUI
 
 struct SplashView: View {
-    
     @EnvironmentObject private var coordinator: Coordinator
     @State private var showDashboard = false // State to control navigation
-    
     var body: some View {
         LottieView(
             animation: .named(
-                "splash"
+                Lottie.splash
             )
         ).playing()
-            .animationDidFinish({
-                completed in
-                coordinator.presentFullScreenCover(.dashboard)
-            })
-        
-        
+            .animationDidFinish { _ in
+                coordinator.presentFullScreenCover(
+                    .dashboard
+                )
+            }
     }
-    
 }
 
 #Preview {
