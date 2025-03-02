@@ -5,4 +5,6 @@
 //  Created by jorel kim cruz on 3/2/25.
 //
 
-struct Images {}
+struct Images {
+    static let background = "bg"
+}

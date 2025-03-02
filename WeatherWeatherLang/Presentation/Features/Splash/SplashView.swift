@@ -18,9 +18,11 @@ struct SplashView: View {
             )
         ).playing()
             .animationDidFinish { _ in
-                coordinator.presentFullScreenCover(
-                    .dashboard
-                )
+                if JailbreakDetection.isJailbroken {
+                    coordinator.presentFullScreenCover(.notSafeView, parameter: nil)
+                } else {
+                    coordinator.presentFullScreenCover(.dashboard, parameter: "SHITNESS")
+                }
             }
     }
 }

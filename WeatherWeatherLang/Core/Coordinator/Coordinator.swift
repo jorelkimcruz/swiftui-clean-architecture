@@ -12,6 +12,7 @@ class Coordinator: ObservableObject {
     @Published var path: NavigationPath = .init()
 //    @Published var sheet: Sheet?
     @Published var fullScreenCover: FullScreenCover?
+    var parameter: Any?
 
     func push(page: Routes) {
         path.append(page)
@@ -29,7 +30,8 @@ class Coordinator: ObservableObject {
 //        self.sheet = sheet
 //    }
 
-    func presentFullScreenCover(_ cover: FullScreenCover) {
+    func presentFullScreenCover(_ cover: FullScreenCover, parameter: Any?) {
+        self.parameter = parameter
         fullScreenCover = cover
     }
 
@@ -39,6 +41,7 @@ class Coordinator: ObservableObject {
 
     func dismissCover() {
         fullScreenCover = nil
+        parameter = nil
     }
 
     @ViewBuilder
@@ -57,8 +60,13 @@ class Coordinator: ObservableObject {
 
     @ViewBuilder
     func buildCover(cover: FullScreenCover) -> some View {
-        switch cover {
-        case .dashboard: DashboardView()
+        if let param = parameter as? String {
+            switch cover {
+            case .notSafeView: NotSafeView()
+            case .dashboard: DashboardView()
+            }
+        } else {
+            SplashView()
         }
     }
 }

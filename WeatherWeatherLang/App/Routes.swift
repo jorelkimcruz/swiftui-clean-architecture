@@ -17,6 +17,7 @@ enum FullScreenCover: String, Identifiable {
     }
 
     case dashboard
+    case notSafeView
 }
 
 // enum Sheet: String, Identifiable {

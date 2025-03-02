@@ -10,11 +10,11 @@ import SwiftUI
 
 @main
 struct Main: App {
-    init() {
-        DependencyInjectionInitializer.shared.initialize()
-    }
-
     @StateObject private var coordinator = Coordinator()
+
+    init() {
+        _ = DependencyInjectionInitializer()
+    }
 
     var body: some Scene {
         WindowGroup {
