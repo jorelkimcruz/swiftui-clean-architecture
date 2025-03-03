@@ -7,10 +7,14 @@ public enum APIError: Error {
     case decodingError(Error)
 }
 
+public struct APIVersion {
+    public static let number = 1
+}
+
 public struct APIOptions {
     public let baseURL: URL
 
-    public init(baseURL: URL = URL(string: "https://api.open-meteo.com/v1")!) {
+    public init(baseURL: URL = URL(string: "https://api.open-meteo.com/v\(APIVersion.number)")!) {
         self.baseURL = baseURL
     }
 }

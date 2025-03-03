@@ -7,5 +7,14 @@
 
 import Foundation
 
-class DashboardViewModel: ObservableObject {
+actor DashboardViewModel: ObservableObject {
+    private let getWeatherUsecase: GetWeatherUsecase
+
+    init(_ getWeatherUsecase: GetWeatherUsecase) {
+        self.getWeatherUsecase = getWeatherUsecase
+    }
+
+    func getWeather() async throws -> WeatherForecastResponse {
+        try await getWeatherUsecase.run()
+    }
 }

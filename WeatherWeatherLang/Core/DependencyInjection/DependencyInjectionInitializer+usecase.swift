@@ -5,15 +5,11 @@
 //  Created by jorel kim cruz on 3/2/25.
 //
 import Swinject
-enum DependencyInjectionError: Error {
-    //    One or more dependencies are not registered in the container
-    case dependencyNotRegistered
-}
 
 extension DependencyInjectionInitializer {
-    func initViewModel() {
-        container.register(DashboardViewModel.self) { container in
-            DashboardViewModel(container.resolve(GetWeatherUsecase.self)!)
+    func initUsecase() {
+        container.register(GetWeatherUsecase.self) { container in
+            GetWeatherUsecase(repository: container.resolve(OpenMeteoRepository.self)!)
         }
         do {
             try validateDependencies()
@@ -24,7 +20,7 @@ extension DependencyInjectionInitializer {
 
     private func validateDependencies() throws {
         let dependencies: [() -> Any?] = [
-            { self.container.resolve(DashboardViewModel.self) },
+            { self.container.resolve(GetWeatherUsecase.self) },
         ]
 
         for resolve in dependencies {
@@ -32,6 +28,6 @@ extension DependencyInjectionInitializer {
                 throw DependencyInjectionError.dependencyNotRegistered
             }
         }
-        print("All viewmodel dependencies are successfully registered.")
+        print("All Usecase dependencies are successfully registered.")
     }
 }
