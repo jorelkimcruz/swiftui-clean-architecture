@@ -8,9 +8,10 @@ import Swinject
 
 extension DependencyInjectionInitializer {
     func initUsecase() {
-        container.register(GetWeatherUsecase.self) { container in
-            GetWeatherUsecase(repository: container.resolve(OpenMeteoRepository.self)!)
-        }
+        container.register(GetWeatherUsecase.self) { _  in
+            GetWeatherUsecase(repository: self.container.resolve(OpenMeteoRepository.self)!)
+        }.inObjectScope(.container)
+
         do {
             try validateDependencies()
         } catch {

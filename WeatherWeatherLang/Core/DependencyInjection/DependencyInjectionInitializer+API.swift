@@ -8,7 +8,9 @@ import Swinject
 
 extension DependencyInjectionInitializer {
     func initApi() {
-        container.register(API.self) { _ in API() }
+        container.register(API.self) { _  in
+            API()
+        }.inObjectScope(.container)
         do {
             try validateDependencies()
         } catch {

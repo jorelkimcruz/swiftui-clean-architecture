@@ -9,9 +9,9 @@ import Swinject
 
 extension DependencyInjectionInitializer {
     func initRepository() {
-        container.register(OpenMeteoRepository.self) { container in
-            OpenMeteoRepositoryImplementation(api: container.resolve(API.self)!)
-        }
+        container.register(OpenMeteoRepository.self) { _  in
+            OpenMeteoRepositoryImplementation(api: self.container.resolve(API.self)!)
+        }.inObjectScope(.container)
         do {
             try validateDependencies()
         } catch {

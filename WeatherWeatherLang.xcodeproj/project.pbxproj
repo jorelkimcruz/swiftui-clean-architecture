@@ -41,6 +41,7 @@
 		B48C9CEE2D7454AA00CBC9C7 /* JailbreakDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C9CED2D7454AA00CBC9C7 /* JailbreakDetection.swift */; };
 		B48C9CF02D745BB500CBC9C7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C9CEF2D745BB500CBC9C7 /* DashboardViewModel.swift */; };
 		B491B06B2D7493EC004423B0 /* DependencyInjectionInitializer+viewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491B06A2D7493EC004423B0 /* DependencyInjectionInitializer+viewmodel.swift */; };
+		B496D5F92D773CD60049A46C /* DependencyInjectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496D5F82D773CD60049A46C /* DependencyInjectionError.swift */; };
 		B49ADD352D74BCD8001937B0 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADD312D74BCD8001937B0 /* DarkTheme.swift */; };
 		B49ADD362D74BCD8001937B0 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADD322D74BCD8001937B0 /* ThemeManager.swift */; };
 		B49ADD372D74BCD8001937B0 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADD332D74BCD8001937B0 /* LightTheme.swift */; };
@@ -100,6 +101,7 @@
 		B48C9CED2D7454AA00CBC9C7 /* JailbreakDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakDetection.swift; sourceTree = "<group>"; };
 		B48C9CEF2D745BB500CBC9C7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		B491B06A2D7493EC004423B0 /* DependencyInjectionInitializer+viewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyInjectionInitializer+viewmodel.swift"; sourceTree = "<group>"; };
+		B496D5F82D773CD60049A46C /* DependencyInjectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionError.swift; sourceTree = "<group>"; };
 		B49ADD312D74BCD8001937B0 /* DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		B49ADD322D74BCD8001937B0 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		B49ADD332D74BCD8001937B0 /* LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				B48C44C32D75D68900A63EDF /* DependencyInjectionInitializer+usecase.swift */,
 				B48C44C52D75D6B700A63EDF /* DependencyInjectionInitializer+API.swift */,
 				B48C44CA2D75DBF600A63EDF /* DependencyInjectionInitializer+Repository.swift */,
+				B496D5F82D773CD60049A46C /* DependencyInjectionError.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				B48C9CF02D745BB500CBC9C7 /* DashboardViewModel.swift in Sources */,
 				B406D92B2D7371A200C82508 /* WeatherForecastResponse.swift in Sources */,
 				B406D9292D73710900C82508 /* API.swift in Sources */,
+				B496D5F92D773CD60049A46C /* DependencyInjectionError.swift in Sources */,
 				B419E7892D73990600FA3C01 /* Routes.swift in Sources */,
 				B48C9CEE2D7454AA00CBC9C7 /* JailbreakDetection.swift in Sources */,
 				B48C44C42D75D68900A63EDF /* DependencyInjectionInitializer+usecase.swift in Sources */,

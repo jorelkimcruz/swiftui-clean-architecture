@@ -5,16 +5,12 @@
 //  Created by jorel kim cruz on 3/2/25.
 //
 import Swinject
-enum DependencyInjectionError: Error {
-    //    One or more dependencies are not registered in the container
-    case dependencyNotRegistered
-}
 
 extension DependencyInjectionInitializer {
     func initViewModel() {
-        container.register(DashboardViewModel.self) { container in
-            DashboardViewModel(container.resolve(GetWeatherUsecase.self)!)
-        }
+        container.register(DashboardViewModel.self) { _  in
+            DashboardViewModel(self.container.resolve(GetWeatherUsecase.self)!)
+        }.inObjectScope(.container)
         do {
             try validateDependencies()
         } catch {

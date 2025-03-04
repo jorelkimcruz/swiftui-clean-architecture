@@ -10,8 +10,8 @@ import SwiftUI
 import Swinject
 
 struct DashboardView: View {
-    @Inject var viewModel: DashboardViewModel
-    @Inject var viewModelss: DashboardViewModel
+    @Inject private var viewModel: DashboardViewModel
+
     @Environment(\.theme)
     var theme
     var body: some View {
@@ -36,12 +36,6 @@ struct DashboardView: View {
         }.task {
             do {
                 let weather = try await viewModel.getWeather()
-                print(weather)
-            } catch {
-                print(error)
-            }
-            do {
-                let weather = try await viewModelss.getWeather()
                 print(weather)
             } catch {
                 print(error)

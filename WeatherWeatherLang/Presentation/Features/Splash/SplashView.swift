@@ -11,6 +11,7 @@ import SwiftUI
 struct SplashView: View {
     @EnvironmentObject private var coordinator: Coordinator
     @State private var showDashboard = false // State to control navigation
+
     var body: some View {
         LottieView(
             animation: .named(
