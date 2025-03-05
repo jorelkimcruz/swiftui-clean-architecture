@@ -8,8 +8,7 @@
 import Foundation
 
 class DashboardViewModel: ObservableObject {
-    @Published var isLoading = true
-    @Published var isError = false
+    @Published var viewState: ViewState = .idle
     @Published var weather: WeatherForecast?
 
     private let getWeatherUsecase: GetWeatherUsecase
@@ -23,20 +22,23 @@ class DashboardViewModel: ObservableObject {
             do {
                 try await self.getWeather()
             } catch {
-                isError = true
+                viewState = .error(error: error)
             }
         }
+    }
+
+    func currentTemperature() -> String {
+        weather?.current?.temperature ?? ""
     }
 
     @MainActor
     func getWeather() async throws {
         do {
-            isLoading = true
+            viewState = .loading
             weather = try await getWeatherUsecase.run()
-            isLoading = false
+            viewState = .success
         } catch {
-            isError = true
-            isLoading = false
+            viewState = .error(error: error)
         }
     }
 }

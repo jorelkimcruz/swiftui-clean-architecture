@@ -51,26 +51,30 @@ struct API {
 
         do {
             let (data, response) = try await session.data(from: url)
-
             guard let httpResponse = response as? HTTPURLResponse,
-                  (200 ... 299).contains(httpResponse.statusCode)
+                  (200 ... 500).contains(httpResponse.statusCode)
             else {
                 throw APIError.invalidResponse
             }
-            // check if running in debug mode
-            if _isDebugAssertConfiguration() {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                    print(json ?? "")
-                } catch {
-                    print("errorMsg")
-                }
-            }
+            log(httpResponse: httpResponse, data: data)
             return try JSONDecoder().decode(T.self, from: data)
         } catch let error as DecodingError {
             throw APIError.decodingError(error)
         } catch {
             throw APIError.networkError(error)
+        }
+    }
+
+    func log(httpResponse: HTTPURLResponse, data: Data) {
+        // check if running in debug mode
+        if _isDebugAssertConfiguration() {
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                print("STATUS CODE: \(httpResponse.statusCode)")
+                print("RESPONSE: \(String(describing: json))")
+            } catch {
+                print("errorMsg")
+            }
         }
     }
 }

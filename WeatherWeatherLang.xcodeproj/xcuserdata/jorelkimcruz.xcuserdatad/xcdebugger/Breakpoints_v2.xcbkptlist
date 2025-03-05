@@ -7,16 +7,124 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1D1FE7BE-4572-46A6-8067-7F3962B1CF41"
+            uuid = "9027213F-201A-4D53-834D-B116164E0CD4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherWeatherLang/Data/Source/API/API.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "fetch(_:parameters:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9027213F-201A-4D53-834D-B116164E0CD4 - c9269fd20be79092"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherWeatherLang.API.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Swift.String, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "WeatherWeatherLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorelkimcruz/Documents/workspace-swift/WeatherWeatherLang/WeatherWeatherLang/Data/Source/API/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62">
+               </Location>
+               <Location
+                  uuid = "9027213F-201A-4D53-834D-B116164E0CD4 - ad2cf8f52e92fe93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for WeatherWeatherLang.API.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Swift.String, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "WeatherWeatherLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorelkimcruz/Documents/workspace-swift/WeatherWeatherLang/WeatherWeatherLang/Data/Source/API/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8D6B5B8-3DBC-4015-82DD-F82A94CC678F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherWeatherLang/Data/Source/API/API.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetch(_:parameters:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8D6B5B8-3DBC-4015-82DD-F82A94CC678F - c9269fd20be790d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherWeatherLang.API.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Swift.String, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "WeatherWeatherLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorelkimcruz/Documents/workspace-swift/WeatherWeatherLang/WeatherWeatherLang/Data/Source/API/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64">
+               </Location>
+               <Location
+                  uuid = "A8D6B5B8-3DBC-4015-82DD-F82A94CC678F - ad2cf8f52e92fed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for WeatherWeatherLang.API.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Swift.String, parameters: Swift.Encodable) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "WeatherWeatherLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jorelkimcruz/Documents/workspace-swift/WeatherWeatherLang/WeatherWeatherLang/Data/Source/API/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D397AAB-AAD1-4826-B5F9-A2DED06DA204"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherWeatherLang/Data/Source/Model/Response/WeatherForecastResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D79B4B55-BBFC-4C62-8DC6-AE2EFBF1E586"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherWeatherLang/Data/Source/Model/Response/WeatherForecastResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "init(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

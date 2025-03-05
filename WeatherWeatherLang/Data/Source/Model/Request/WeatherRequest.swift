@@ -10,8 +10,9 @@ import Foundation
 struct WeatherRequest: Encodable {
     let latitude: Double
     let longitude: Double
-    let hourly: [HourlyForecast]?
-    let daily: [DailyForecast]?
+    let hourly: Forecast?
+    let daily: Forecast?
+    let current: Forecast?
     let elevation: Double?
     let pastDays: Int?
     let pastHours: Int?
@@ -30,6 +31,7 @@ struct WeatherRequest: Encodable {
         case longitude
         case hourly
         case daily
+        case current
         case elevation
         case pastDays = "past_days"
         case pastHours = "past_hours"
@@ -48,8 +50,9 @@ struct WeatherRequest: Encodable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(latitude, forKey: .latitude)
         try container.encode(longitude, forKey: .longitude)
-        try container.encodeIfPresent(hourly?.map { $0.rawValue }, forKey: .hourly)
-        try container.encodeIfPresent(daily?.map { $0.rawValue }, forKey: .daily)
+        try container.encodeIfPresent(hourly?.rawValue, forKey: .hourly)
+        try container.encodeIfPresent(daily?.rawValue, forKey: .daily)
+        try container.encodeIfPresent(current?.rawValue, forKey: .current)
         try container.encodeIfPresent(elevation, forKey: .elevation)
         try container.encodeIfPresent(pastDays, forKey: .pastDays)
         try container.encodeIfPresent(pastHours, forKey: .pastHours)
