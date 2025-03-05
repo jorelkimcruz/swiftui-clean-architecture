@@ -7,23 +7,11 @@
 
 import Foundation
 
-enum Hourly: String, CaseIterable {
-    case temperature2m = "temperature_2m"
-    case relativeHumidity2m = "relative_humidity_2m"
-    case precipitation
-    case windSpeed10m = "wind_speed_10m"
-}
-
-enum Daily: String, CaseIterable {
-    case temperature2mMax = "temperature_2m_max"
-    case temperature2mMin = "temperature_2m_min"
-    case precipitationSum = "precipitation_sum"
-}
 struct WeatherRequest: Encodable {
     let latitude: Double
     let longitude: Double
-    let hourly: [Hourly]?
-    let daily: [Daily]?
+    let hourly: [HourlyForecast]?
+    let daily: [DailyForecast]?
     let elevation: Double?
     let pastDays: Int?
     let pastHours: Int?
@@ -35,6 +23,7 @@ struct WeatherRequest: Encodable {
     let endDate: Date?
     let startHour: Date?
     let endHour: Date?
+    let temperatureUnit: TemperatureUnit?
 
     enum CodingKeys: String, CodingKey {
         case latitude
@@ -52,6 +41,7 @@ struct WeatherRequest: Encodable {
         case endDate = "end_date"
         case startHour = "start_hour"
         case endHour = "end_hour"
+        case temperatureUnit = "temperature_unit"
     }
 
     func encode(to encoder: Encoder) throws {
@@ -71,5 +61,6 @@ struct WeatherRequest: Encodable {
         try container.encodeIfPresent(endDate?.ISO8601Format(), forKey: .endDate)
         try container.encodeIfPresent(startHour?.ISO8601Format(), forKey: .startHour)
         try container.encodeIfPresent(endHour?.ISO8601Format(), forKey: .endHour)
+        try container.encodeIfPresent(temperatureUnit?.rawValue, forKey: .temperatureUnit)
     }
 }

@@ -15,7 +15,7 @@ struct GetWeatherUsecase {
                                      daily: nil, elevation: nil,
                                      pastDays: nil, pastHours: nil, pastMinutely15: nil, forecastDays: nil,
                                      forecastHours: nil, forecastMinutely15: nil, startDate: nil, endDate: nil,
-                                     startHour: nil, endHour: nil)
+                                     startHour: nil, endHour: nil, temperatureUnit: .celcius)
 
         let response: WeatherForecastResponse = try await repository.getWeather(request: request)
         return WeatherForecast(latitude: response.latitude,

@@ -4,6 +4,7 @@ public enum APIError: Error {
     case invalidURL
     case networkError(Error)
     case invalidResponse
+    case invalidRequest
     case decodingError(Error)
 }
 
@@ -35,10 +36,14 @@ struct API {
             throw APIError.invalidURL
         }
 
-        let jsonEncoder = JSONEncoder()
-        let jsonData = try jsonEncoder.encode(parameters)
-        let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
-        components.queryItems = json!.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        do {
+            let jsonEncoder = JSONEncoder()
+            let jsonData = try jsonEncoder.encode(parameters)
+            let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
+            components.queryItems = json!.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        } catch {
+            throw APIError.invalidRequest
+        }
 
         guard let url = components.url else {
             throw APIError.invalidURL
