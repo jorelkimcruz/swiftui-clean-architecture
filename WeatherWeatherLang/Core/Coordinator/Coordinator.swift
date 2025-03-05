@@ -60,13 +60,11 @@ class Coordinator: ObservableObject {
 
     @ViewBuilder
     func buildCover(cover: FullScreenCover) -> some View {
-        if let param = parameter as? String {
-            switch cover {
-            case .notSafeView: NotSafeView()
-            case .dashboard: DashboardView()
-            }
-        } else {
-            SplashView()
+        let param = parameter
+
+        switch cover {
+        case .notSafeView: NotSafeView()
+        case .dashboard: DashboardView()
         }
     }
 }

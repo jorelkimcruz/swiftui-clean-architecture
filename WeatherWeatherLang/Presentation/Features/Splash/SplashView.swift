@@ -22,7 +22,7 @@ struct SplashView: View {
                 if JailbreakDetection.isJailbroken {
                     coordinator.presentFullScreenCover(.notSafeView, parameter: nil)
                 } else {
-                    coordinator.presentFullScreenCover(.dashboard, parameter: "SHITNESS")
+                    coordinator.presentFullScreenCover(.dashboard, parameter: nil)
                 }
             }
     }

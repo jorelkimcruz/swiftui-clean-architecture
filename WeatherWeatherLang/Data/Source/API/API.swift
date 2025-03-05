@@ -7,7 +7,7 @@ public enum APIError: Error {
     case decodingError(Error)
 }
 
-public struct APIVersion {
+public enum APIVersion {
     public static let number = 1
 }
 
@@ -19,7 +19,7 @@ public struct APIOptions {
     }
 }
 
- struct API {
+struct API {
     private let options: APIOptions
     private let session: URLSession
 
@@ -28,14 +28,17 @@ public struct APIOptions {
         session = URLSession.shared
     }
 
-    func fetch<T: Decodable>(_ endpoint: String, parameters: [String: Any]) async throws -> T {
+    func fetch<T: Decodable>(_ endpoint: String, parameters: Encodable) async throws -> T {
         guard var components = URLComponents(url: options.baseURL.appendingPathComponent(endpoint),
                                              resolvingAgainstBaseURL: true)
         else {
             throw APIError.invalidURL
         }
 
-        components.queryItems = parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try jsonEncoder.encode(parameters)
+        let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
+        components.queryItems = json!.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
 
         guard let url = components.url else {
             throw APIError.invalidURL
@@ -49,7 +52,15 @@ public struct APIOptions {
             else {
                 throw APIError.invalidResponse
             }
-
+            // check if running in debug mode
+            if _isDebugAssertConfiguration() {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                    print(json ?? "")
+                } catch {
+                    print("errorMsg")
+                }
+            }
             return try JSONDecoder().decode(T.self, from: data)
         } catch let error as DecodingError {
             throw APIError.decodingError(error)

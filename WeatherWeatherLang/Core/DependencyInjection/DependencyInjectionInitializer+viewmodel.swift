@@ -4,12 +4,13 @@
 //
 //  Created by jorel kim cruz on 3/2/25.
 //
+import SwiftUI
 import Swinject
 
 extension DependencyInjectionInitializer {
     func initViewModel() {
-        container.register(DashboardViewModel.self) { _  in
-            DashboardViewModel(self.container.resolve(GetWeatherUsecase.self)!)
+        container.register(StateObject<DashboardViewModel>.self) { _  in
+            StateObject(wrappedValue: DashboardViewModel(self.container.resolve(GetWeatherUsecase.self)!))
         }.inObjectScope(.container)
         do {
             try validateDependencies()
@@ -20,7 +21,7 @@ extension DependencyInjectionInitializer {
 
     private func validateDependencies() throws {
         let dependencies: [() -> Any?] = [
-            { self.container.resolve(DashboardViewModel.self) },
+            { self.container.resolve(StateObject<DashboardViewModel>.self) },
         ]
 
         for resolve in dependencies {

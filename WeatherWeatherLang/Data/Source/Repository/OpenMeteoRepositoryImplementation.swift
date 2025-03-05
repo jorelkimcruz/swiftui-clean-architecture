@@ -13,10 +13,6 @@ struct OpenMeteoRepositoryImplementation: OpenMeteoRepository {
     private let getweatherURL = "/forecast"
 
     func getWeather(request: WeatherRequest) async throws -> WeatherForecastResponse {
-        do {
-            return try await api.fetch(getweatherURL, parameters: request.body())
-        } catch {
-            throw error
-        }
+        try await api.fetch(getweatherURL, parameters: request)
     }
 }
