@@ -13,6 +13,7 @@ The project is divided into layers:
 - **Coordinator**: Contains the navigation between the views.
 
 ## Folder structure
+```bash
 WeatherWeatherLang
 ├── App
 │   └── Routes
@@ -38,6 +39,10 @@ WeatherWeatherLang
 │   └── Navigation
 └── Assets
     └── Assets.xcassets
+```
+
+## Dependency Injection
+Swinject is used to manage dependencies between components. The dependency injection container and resolver is set up in the App layer and provides instances of services to features.
 
 ## Coordinator
 The coordinator pattern is used to handle the navigation between the views. The coordinator is responsible for the navigation between them.
@@ -53,9 +58,11 @@ The coordinator pattern is used to handle the navigation between the views. The 
 - [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 - [Lottie](https://github.com/airbnb/lottie-ios)
 - [mockingbird](https://github.com/Quick/mockingbird)
+- [Swinject](https://github.com/Swinject/Swinject)
 
 ##SOON 
 - [Quick](https://github.com/Quick/Quick)
 - [Nimble](https://github.com/Quick/Nimble)
 
 Quick and nimble currently doesnt support Swift 6, will add as soon as it supports it
+
