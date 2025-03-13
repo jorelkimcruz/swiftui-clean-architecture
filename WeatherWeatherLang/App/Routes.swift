@@ -7,23 +7,30 @@
 
 import Foundation
 
-enum Routes: Hashable {
+enum Routes: Identifiable, CaseIterable {
     case splash
-}
 
-enum FullScreenCover: String, Identifiable {
-    var id: String {
-        rawValue
+    var id: Self {
+        self
     }
-
-    case dashboard
-    case notSafeView
 }
 
-// enum Sheet: String, Identifiable {
-//    var id: String {
-//        self.rawValue
-//    }
+enum FullScreenCover: Identifiable, CaseIterable {
+    case dashboard, notSafeView
+
+    var id: Self {
+        self
+    }
+}
+
+//
+// enum Sheet: Identifiable, CaseIterable {
 //    // Add your sheet cases here
 //    case
+//
+//        var id: Self
+//    {
+//        self
+//    }
 // }
+//

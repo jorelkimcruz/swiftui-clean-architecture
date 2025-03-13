@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		B406D8F52D7369F100C82508 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406D8F42D7369F100C82508 /* SplashView.swift */; };
 		B406D8F92D7369F200C82508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B406D8F82D7369F200C82508 /* Assets.xcassets */; };
 		B406D8FC2D7369F200C82508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B406D8FB2D7369F200C82508 /* Preview Assets.xcassets */; };
-		B406D9062D7369F300C82508 /* WeatherWeatherLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406D9052D7369F300C82508 /* WeatherWeatherLangTests.swift */; };
 		B406D9102D7369F300C82508 /* WeatherWeatherLangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406D90F2D7369F300C82508 /* WeatherWeatherLangUITests.swift */; };
 		B406D9122D7369F300C82508 /* WeatherWeatherLangUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406D9112D7369F300C82508 /* WeatherWeatherLangUITestsLaunchTests.swift */; };
 		B406D9252D736ADC00C82508 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B406D9242D736ADC00C82508 /* Swinject */; };
@@ -23,6 +22,7 @@
 		B406D9452D738A8A00C82508 /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = B406D9442D738A8A00C82508 /* NavigationTransitions */; };
 		B406D94A2D73906000C82508 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406D9492D73906000C82508 /* Coordinator.swift */; };
 		B40727142D73ADDB00A05191 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B40727132D73ADDB00A05191 /* .swiftlint.yml */; };
+		B41353162D7E17C500407EEE /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = B41353152D7E17C500407EEE /* Mockingbird */; };
 		B419E7892D73990600FA3C01 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B419E7882D73990600FA3C01 /* Routes.swift */; };
 		B419E78E2D73A2D800FA3C01 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B419E78D2D73A2D800FA3C01 /* Images.swift */; };
 		B419E7912D73A31000FA3C01 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B419E7902D73A31000FA3C01 /* Lottie.swift */; };
@@ -34,6 +34,8 @@
 		B4897BC02D788055006278A0 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4897BBF2D788055006278A0 /* TemperatureUnit.swift */; };
 		B4897BC32D7882AB006278A0 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4897BC22D7882AB006278A0 /* ViewState.swift */; };
 		B4897BC52D788396006278A0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4897BC42D788396006278A0 /* ErrorView.swift */; };
+		B4897BCA2D7898A8006278A0 /* Di.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4897BC92D7898A8006278A0 /* Di.swift */; };
+		B4897BCC2D7898B2006278A0 /* DashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4897BCB2D7898B2006278A0 /* DashboardTests.swift */; };
 		B48C44C22D75D54A00A63EDF /* GetWeatherUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C44C12D75D54A00A63EDF /* GetWeatherUsecase.swift */; };
 		B48C44C42D75D68900A63EDF /* DependencyInjectionInitializer+usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C44C32D75D68900A63EDF /* DependencyInjectionInitializer+usecase.swift */; };
 		B48C44C62D75D6B700A63EDF /* DependencyInjectionInitializer+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C44C52D75D6B700A63EDF /* DependencyInjectionInitializer+API.swift */; };
@@ -51,6 +53,7 @@
 		B49ADD372D74BCD8001937B0 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADD332D74BCD8001937B0 /* LightTheme.swift */; };
 		B49ADD382D74BCD8001937B0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49ADD342D74BCD8001937B0 /* Theme.swift */; };
 		B4A2FA442D74ABAE00D21E71 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = B4A2FA432D74ABAE00D21E71 /* splash.json */; };
+		FBCAC181899FD3ECA2F62DF9 /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44E11C92622EB47FEF325D /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,13 +74,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		325FDADC75CDA6997358C287 /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; path = "MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; sourceTree = "<group>"; };
+		882DF97563D4ECEEA4FAF27E /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; path = "MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; sourceTree = "<group>"; };
+		8E5B8660FE9893E60357C059 /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; path = "MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; sourceTree = "<group>"; };
+		ABC188B87DD20EA90CAAA913 /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; path = "MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; sourceTree = "<group>"; };
 		B406D8EF2D7369F100C82508 /* WeatherWeatherLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWeatherLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B406D8F22D7369F100C82508 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		B406D8F42D7369F100C82508 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		B406D8F82D7369F200C82508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B406D8FB2D7369F200C82508 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B406D9012D7369F200C82508 /* WeatherWeatherLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherWeatherLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B406D9052D7369F300C82508 /* WeatherWeatherLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWeatherLangTests.swift; sourceTree = "<group>"; };
 		B406D90B2D7369F300C82508 /* WeatherWeatherLangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherWeatherLangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B406D90F2D7369F300C82508 /* WeatherWeatherLangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWeatherLangUITests.swift; sourceTree = "<group>"; };
 		B406D9112D7369F300C82508 /* WeatherWeatherLangUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWeatherLangUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 		B4897BBF2D788055006278A0 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		B4897BC22D7882AB006278A0 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		B4897BC42D788396006278A0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		B4897BC92D7898A8006278A0 /* Di.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Di.swift; sourceTree = "<group>"; };
+		B4897BCB2D7898B2006278A0 /* DashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		B48C44C12D75D54A00A63EDF /* GetWeatherUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherUsecase.swift; sourceTree = "<group>"; };
 		B48C44C32D75D68900A63EDF /* DependencyInjectionInitializer+usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyInjectionInitializer+usecase.swift"; sourceTree = "<group>"; };
 		B48C44C52D75D6B700A63EDF /* DependencyInjectionInitializer+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyInjectionInitializer+API.swift"; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 		B49ADD332D74BCD8001937B0 /* LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		B49ADD342D74BCD8001937B0 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B4A2FA432D74ABAE00D21E71 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		BD44E11C92622EB47FEF325D /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; path = "MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41353162D7E17C500407EEE /* Mockingbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +162,7 @@
 				B406D9042D7369F300C82508 /* WeatherWeatherLangTests */,
 				B406D90E2D7369F300C82508 /* WeatherWeatherLangUITests */,
 				B406D8F02D7369F100C82508 /* Products */,
+				ECAEDFB64C686F61E8E14D13 /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,7 +203,7 @@
 		B406D9042D7369F300C82508 /* WeatherWeatherLangTests */ = {
 			isa = PBXGroup;
 			children = (
-				B406D9052D7369F300C82508 /* WeatherWeatherLangTests.swift */,
+				B4897BC82D7898A1006278A0 /* Dashboard */,
 			);
 			path = WeatherWeatherLangTests;
 			sourceTree = "<group>";
@@ -382,6 +393,15 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		B4897BC82D7898A1006278A0 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B4897BC92D7898A8006278A0 /* Di.swift */,
+				B4897BCB2D7898B2006278A0 /* DashboardTests.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		B48C44C02D75D53200A63EDF /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +463,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		ECAEDFB64C686F61E8E14D13 /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BD44E11C92622EB47FEF325D /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,9 +501,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B406D9182D7369F300C82508 /* Build configuration list for PBXNativeTarget "WeatherWeatherLangTests" */;
 			buildPhases = (
+				D967FCE030E6838FC5810397 /* Generate Mockingbird Mocks */,
 				B406D8FD2D7369F200C82508 /* Sources */,
 				B406D8FE2D7369F200C82508 /* Frameworks */,
 				B406D8FF2D7369F200C82508 /* Resources */,
+				B4F9DC252D7E0D01004731B3 /* Mockingbird Run Script */,
 			);
 			buildRules = (
 			);
@@ -483,6 +513,9 @@
 				B406D9032D7369F300C82508 /* PBXTargetDependency */,
 			);
 			name = WeatherWeatherLangTests;
+			packageProductDependencies = (
+				B41353152D7E17C500407EEE /* Mockingbird */,
+			);
 			productName = WeatherWeatherLangTests;
 			productReference = B406D9012D7369F200C82508 /* WeatherWeatherLangTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -529,7 +562,7 @@
 				};
 			};
 			buildConfigurationList = B406D8EA2D7369F100C82508 /* Build configuration list for PBXProject "WeatherWeatherLang" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -542,6 +575,7 @@
 				B406D9382D73787000C82508 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				B406D9432D738A8A00C82508 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */,
 				B4EA88682D74A7DB00E0ACCF /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				B41353142D7E17C500407EEE /* XCRemoteSwiftPackageReference "mockingbird" */,
 			);
 			productRefGroup = B406D8F02D7369F100C82508 /* Products */;
 			projectDirPath = "";
@@ -582,6 +616,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4F9DC252D7E0D01004731B3 /* Mockingbird Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Mockingbird Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Prevent Xcode 13 from running this script while indexing.\n[[ \"${ACTION}\" == \"indexbuild\" ]] && exit 0\n\n# Infer the derived data location from the build environment.\n[[ -z \"${DERIVED_DATA+x}\" ]] && DERIVED_DATA=\"$(echo \"${BUILD_ROOT}\" | sed -n 's|\\(.*\\)/Build/.*|\\1|p')\"\n\n\"${DERIVED_DATA}/SourcePackages/checkouts/mockingbird/mockingbird\" configure WeatherWeatherLangTests -- --targets WeatherWeatherLang --disable-swiftlint \n";
+		};
+		D967FCE030E6838FC5810397 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Prevent Xcode 13 from running this script while indexing.\n[[ \"${ACTION}\" == \"indexbuild\" ]] && exit 0\n\n\"${HOME}/Library/Developer/Xcode/DerivedData/WeatherWeatherLang-hclxuvoqgbxnyfbrrlpqhxvnqypg/SourcePackages/checkouts/mockingbird/mockingbird\" generate --targets \"WeatherWeatherLang\" --disable-swiftlint --outputs \"${SRCROOT}/MockingbirdMocks/WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B406D8EB2D7369F100C82508 /* Sources */ = {
@@ -628,7 +700,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B406D9062D7369F300C82508 /* WeatherWeatherLangTests.swift in Sources */,
+				B4897BCC2D7898B2006278A0 /* DashboardTests.swift in Sources */,
+				B4897BCA2D7898A8006278A0 /* Di.swift in Sources */,
+				FBCAC181899FD3ECA2F62DF9 /* WeatherWeatherLangTests-WeatherWeatherLangMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +730,7 @@
 		};
 		B43F74D72D74A94800EE2C03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = B43F74D62D74A94800EE2C03 /* SwiftLintBuildToolPlugin */;
+			productRef = B43F74D62D74A94800EE2C03 /* plugin:SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -984,6 +1058,14 @@
 				minimumVersion = 0.14.0;
 			};
 		};
+		B41353142D7E17C500407EEE /* XCRemoteSwiftPackageReference "mockingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/birdrides/mockingbird";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
 		B4EA88682D74A7DB00E0ACCF /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
@@ -1010,7 +1092,12 @@
 			package = B406D9432D738A8A00C82508 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */;
 			productName = NavigationTransitions;
 		};
-		B43F74D62D74A94800EE2C03 /* SwiftLintBuildToolPlugin */ = {
+		B41353152D7E17C500407EEE /* Mockingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B41353142D7E17C500407EEE /* XCRemoteSwiftPackageReference "mockingbird" */;
+			productName = Mockingbird;
+		};
+		B43F74D62D74A94800EE2C03 /* plugin:SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B4EA88682D74A7DB00E0ACCF /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";

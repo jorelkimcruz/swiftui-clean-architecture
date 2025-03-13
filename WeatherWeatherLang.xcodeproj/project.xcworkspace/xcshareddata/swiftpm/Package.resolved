@@ -1,5 +1,5 @@
 {
-  "originHash" : "fd9427037335aa952d1e5eb7ace20939f2bee76f94da05639a923c17b2b00f98",
+  "originHash" : "5582faec25eee70064923094339c880c5da27e1f32715e8a3289df2c7b335f0e",
   "pins" : [
     {
       "identity" : "lottie-ios",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "047aa81b77adcbf583a966dfef620d17650cc656",
         "version" : "4.5.1"
+      }
+    },
+    {
+      "identity" : "mockingbird",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/birdrides/mockingbird",
+      "state" : {
+        "revision" : "6e0d473df6b975719e145f6aebf90990c634700e",
+        "version" : "0.20.0"
       }
     },
     {

@@ -1,0 +1,12 @@
+sources:
+  include:
+  - ../WeatherWeatherLang
+templates:
+- /Users/jorelkimcruz/Documents/workspace-swift/WeatherWeatherLang/.mocky5435158D-1369-44A6-AF99-5956E5A139F8/.template.swifttemplate
+output: /Users/jorelkimcruz/Documents/workspace-swift/WeatherWeatherLang/.mocky5435158D-1369-44A6-AF99-5956E5A139F8/types.yaml
+args:
+  swiftyMocky:
+    import:
+    - Foundation
+    testable:
+    - WeatherWeatherLang

@@ -4,12 +4,14 @@
 //
 //  Created by jorel kim cruz on 3/2/25.
 //
+// TODO: Update to @Observalbe if the lowest supported ios version is 17. 
+// currently @Observable only supports ios 17 above.
 
 import Foundation
 
 class DashboardViewModel: ObservableObject {
     @Published var viewState: ViewState = .idle
-    @Published var weather: WeatherForecast?
+    @Published var weather: WeatherForecastProtocol?
 
     private let getWeatherUsecase: GetWeatherUsecase
 

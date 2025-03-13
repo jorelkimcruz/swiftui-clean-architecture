@@ -52,3 +52,10 @@ The coordinator pattern is used to handle the navigation between the views. The 
 - [SwiftLint](https://swiftpackageindex.com/realm/SwiftLint)
 - [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 - [Lottie](https://github.com/airbnb/lottie-ios)
+- [mockingbird](https://github.com/Quick/mockingbird)
+
+##SOON 
+- [Quick](https://github.com/Quick/Quick)
+- [Nimble](https://github.com/Quick/Nimble)
+
+Quick and nimble currently doesnt support Swift 6, will add as soon as it supports it

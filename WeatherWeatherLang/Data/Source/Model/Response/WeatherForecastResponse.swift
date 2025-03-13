@@ -49,9 +49,9 @@ struct CurrentResponse: Decodable {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.interval = try container.decodeIfPresent(Int.self, forKey: .interval)
-        self.temperature2m = try container.decodeIfPresent(Double.self, forKey: .temperature2m)
-        self.time = try container.decodeIfPresent(String.self, forKey: .time)
+        self.interval = try? container.decode(Int.self, forKey: .interval)
+        self.temperature2m = try? container.decode(Double.self, forKey: .temperature2m)
+        self.time = try? container.decode(String.self, forKey: .time)
     }
 }
 
@@ -68,8 +68,8 @@ struct CurrentUnitResponse: Decodable {
 
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.interval = try container.decodeIfPresent(String.self, forKey: .interval)
-        self.temperature2m = try container.decodeIfPresent(String.self, forKey: .temperature2m)
-        self.time = try container.decodeIfPresent(String.self, forKey: .time)
+        self.interval = try? container.decode(String.self, forKey: .interval)
+        self.temperature2m = try? container.decode(String.self, forKey: .temperature2m)
+        self.time = try? container.decode(String.self, forKey: .time)
     }
 }

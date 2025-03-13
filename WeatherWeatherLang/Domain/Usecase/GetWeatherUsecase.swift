@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct GetWeatherUsecase {
+class GetWeatherUsecase {
     let repository: OpenMeteoRepository
 
-    func run() async throws -> WeatherForecast {
+    init(repository: OpenMeteoRepository) {
+        self.repository = repository
+    }
+
+    func run() async throws -> WeatherForecastProtocol {
         let request = WeatherRequest(latitude: 14.599512, longitude: 120.984222, hourly: nil,
                                      daily: nil, current: Forecast.temperature2m, elevation: nil,
                                      pastDays: nil, pastHours: nil, pastMinutely15: nil, forecastDays: nil,
